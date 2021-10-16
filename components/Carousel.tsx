@@ -1,116 +1,90 @@
 import type { NextPage } from 'next'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Navigation, A11y } from 'swiper'
 import styled from '@emotion/styled'
-import GliderComponent from 'react-glider'
-import 'glider-js/glider.min.css'
 
 const CarouselDS: NextPage = () => {
-  
   const CarouselStyled = styled.div`
-    display: flex;
-    flex: row;
-    overflow: hidden;
-    justify-content: center;
-    margin: 30px;
-    .buttons {
+    margin: 0px auto;
+    width: 80%;
+    .iframeDiv {
       display: flex;
-      flex-flow: row wrap;
-      position: absolute;
-      justify-content: space-between;
-      z-index: 2;
-      width: 420px;
-      height: 500px;
-      button {
-        transition: 300ms all;
-        background: none;
-        border: none;
-        font-size: 40px;
-        font-weight: bold;
-        cursor: pointer;
-      }
+      flex-flow: column wrap;
+      align-items: center;
     }
-    .iframes {
-      display: flex;
-      flex-flow: row wrap;
-      height: 500px;
-      width: 350px;
-      margin: 0px auto;
-      position: absolute;
-      .iframesContent {
-        position: absolute;
-        transition: 300ms all;
-        display: flex;
-        flex-flow: row wrap;
-        max-width: 2000px;
-        margin-left: 0px;
-        .iframeds.first {
-          margin-left: 0px;
-        }
-        .iframeds {
-            margin-left: 30px;
-        }
-      }
+    .swiper-button-next {
+      color: #7289da;
+      transition: 300ms all;
     }
-    .pages {
-      position: absolute;
-      z-index: 3;
-      margin-top: 500px;
-      cursor: pointer;
-      .page.page1 {
-        color: black;
-      }
-      .page {
-        background: none;
-        border: none;
-        font-size: 45px;
-        font-weight: bold;
-        color: #ccc;
-      }
+    .swiper-button-next:hover {
+      text-shadow: 0px 0px 4px #7289da;
+    }
+    .swiper-button-prev {
+      color: #7289da;
+      transition: 300ms all;
+    }
+    .swiper-button-prev:hover {
+      text-shadow: 0px 0px 4px #7289da;
+    }
+    @media(max-width:978px) {
+      
     }
   `
 
-  /*const clickButton = (direction: 'left'|'right') => {
-    if (direction === 'left') {
-      const page = localStorage.getItem('page')
-      if (page) localStorage.setItem('page', (parseInt(page) - 360) + 'px')
-      console.log(marginLeft)
-      console.log(page)
-    } else {
-      console.log('pepe')
-    }
-  }*/
-
   return (
     <CarouselStyled>
-      <GliderComponent
-        draggable
-        hasArrows
-        hasDots
-        slidesToShow={2}
-        slidesToScroll={1}
+      <Swiper
+        spaceBetween={50}
+        modules={[Navigation, A11y]}
+        navigation
+        draggable={false}
+        slidesPerView={3}
       >
-        <h1>1</h1>
-        <h1>2</h1>
-        <h1>3</h1>
-        <h1>4</h1>
-        <h1>5</h1>
-      </GliderComponent>
+        <SwiperSlide>
+          <div className='iframeDiv'>
+            <h3>Discord</h3>
+            <iframe src="https://discord.com/widget?id=814798281682059304&theme=dark" width="250" height="350" allowTransparency={true} frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className='iframeDiv'>
+            <h3>Discord</h3>
+            <iframe src="https://discord.com/widget?id=411615677678616607&theme=dark" width="250" height="350" allowTransparency={true} frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className='iframeDiv'>
+            <h3>Discord</h3>
+            <iframe src="https://discord.com/widget?id=805854905591922718&theme=dark" width="250" height="350" allowTransparency={true} frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className='iframeDiv'>
+            <h3>Discord</h3>
+            <iframe src="https://discord.com/widget?id=870993545459277825&theme=dark" width="250" height="350" allowTransparency={true} frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className='iframeDiv'>
+            <h3>Discord</h3>
+            <iframe src="https://discord.com/widget?id=543134025464676353&theme=dark" width="250" height="350" allowTransparency={true} frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className='iframeDiv'>
+            <h3>Discord</h3>
+            <iframe src="https://discord.com/widget?id=338814044813131780&theme=dark" width="250" height="350" allowTransparency={true} frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className='iframeDiv'>
+            <h3>Discord</h3>
+            <iframe src="https://discord.com/widget?id=331552260108713987&theme=dark" width="250" height="350" allowTransparency={true} frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+          </div>
+        </SwiperSlide>
+      </Swiper>
     </CarouselStyled>
   )
 }
 
 export default CarouselDS
-
-      /*<div className="buttons">
-        <button className='leftButton'>{'<'}</button>
-        <button className='rightButton'>{'>'}</button>
-      </div>
-      <div className="iframes">
-        <div className="iframesContent">
-          <iframe className='iframeds first' src="https://discord.com/widget?id=814798281682059304&theme=dark" width="350" height="500" allowTransparency={true} frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-          <iframe className='iframeds' src="https://discord.com/widget?id=814798281682059304&theme=dark" width="350" height="500" allowTransparency={true} frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-        </div>
-      </div>
-      <div className="pages">
-        <button className="page page1">.</button>
-        <button className="page page2">.</button>
-      </div>*/
