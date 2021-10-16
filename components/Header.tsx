@@ -11,7 +11,7 @@ const Header: NextPage = () => {
     width: 100%;
     height: 100px;
     align-items: center;
-    border-bottom: 2px solid cyan;
+    border-bottom: 2px solid #7510F7;
     .logo {
       transition: 300ms all;
     }
@@ -40,7 +40,7 @@ const Header: NextPage = () => {
     <HeaderStyled>
       <div className='logo'>
         <a href='#'>
-          <h1>Crefo</h1>
+          <h1>Crofo</h1>
         </a>
       </div>
       <ul className='linksHeader'>

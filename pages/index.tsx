@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import styled from '@emotion/styled'
 import Carousel from '../components/Carousel'
+import Title from '../components/Title'
 
 const Home: NextPage = () => {
   const HomeStyled = styled.div`
@@ -8,6 +9,7 @@ const Home: NextPage = () => {
   
   return (
     <HomeStyled>
+      <Title/>
       <Carousel />
     </HomeStyled>
   )
