@@ -32,7 +32,6 @@ const CarouselDS: NextPage = () => {
     .divTitle {
       text-align: center;
       color: #000;
-      text-decoration: underline;
       font-family: fuenteTitulos;
     }
   `
