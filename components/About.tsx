@@ -23,8 +23,6 @@ const About: NextPage = () => {
         .subP {
           text-align: center;
           margin-top: 40px;
-          margin-left: 20%;
-          margin-right: 20%;
           font-size: 26px;
           color: white;
           margin-bottom: 100px;
@@ -32,12 +30,13 @@ const About: NextPage = () => {
 
         .container-skills {
           display: flex;
+          flex-flow: row wrap;
           justify-content: space-around;
           margin-top: 60px;
           background-color: white;
           border-radius: 50px;
-          height: 990px;
           padding-top: 100px;
+          height: auto;
           div {
             display: flex;
             flex-flow: column wrap;
@@ -45,6 +44,7 @@ const About: NextPage = () => {
             padding: 20px;
             border-radius: 20px;
             box-shadow: 0px 0px 4px var(--violeta);
+            margin-top: 10px;
           }
         }
 
@@ -83,6 +83,14 @@ const About: NextPage = () => {
 
         .sectionList {
           color: #000;
+        }
+        @media (max-width: 422px) {
+          .container-skills div {
+            width: 95%;
+          }
+          .container-skills div * {
+            width: 100%;
+          }
         }
     `
   

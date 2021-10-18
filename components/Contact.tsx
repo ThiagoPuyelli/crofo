@@ -4,13 +4,14 @@ import * as yup from 'yup'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { env } from '../next.config'
+import emailjs from 'emailjs-com'
 
 const consultSchema = yup.object({
   name: yup.string().required(),
   email: yup.string().required().email(),
   phone: yup.string().required(),
-  description: yup.string().required(),
-  matter: yup.string().required()
+  description: yup.string(),
+  subject: yup.string().required()
 })
 
 const Contact: NextPage = () => {
@@ -69,30 +70,71 @@ const Contact: NextPage = () => {
         background-color: #5609b9;
       }
     }
+    .success {
+      display: none;
+    }
+
+    @media (max-width: 986px) {
+      .formContact {
+        width: 90%; 
+      }
+    }
   `  
   const { register, handleSubmit, formState: { errors } } = useForm({
     resolver: yupResolver(consultSchema)
   })
 
-  const sendMail = async (data: any) => {
+  const sendMail = async () => {
+    try {
+      const form: any = document.querySelector('.formContact')
+      if (form) {
+        const sendMail = await emailjs.sendForm('service_6muus8v', 'template_wcvnqmj', form, 'user_rAjCF7QtDc5L90sP9WDVe')
+        if (!sendMail) {
+          console.log('error to send mail')
+        }
+        
+        const success: HTMLElement|null = document.querySelector('.success')
+        form.style.display = 'block'
+        if (success) success.style.display = 'block !important'
+      } else {
+        console.log('Error to find form')
+      }
+    } catch (err) {
+      console.log(err)
+    }
   }
 
   return (
     <ContactStyled>
       <form className="formContact" onSubmit={handleSubmit(sendMail)}>
         <h1>Contáctame</h1>
+        
         <label htmlFor="name">Nombre Completo</label>
-        <input {...register('name')} required type="text" placeholder="Nombre completo" maxLength={40} />
+        <input {...register('name')} type="text" placeholder="Nombre completo" maxLength={40} />
+        {errors.name?.type === 'required' && 
+        <span className='msgError'>El nombre es requerido</span>}
+        
         <label htmlFor="email">Email</label>
-        <input {...register('email')} required type="email" placeholder="Email" maxLength={50} />
+        <input {...register('email')} type="email" placeholder="Email" maxLength={50} />
+        {errors.email?.type === 'required' && 
+        <span className='msgError'>El email es requerido</span>}
+        
         <label htmlFor="phone">Teléfono</label>
-        <input {...register('phone')} required type="number" maxLength={30} placeholder="Phone" />
-        <label htmlFor="matter">Asunto</label>
-        <input {...register('matter')} required type="text" placeholder="Asunto" maxLength={40} />
+        <input {...register('phone')} type="number" maxLength={30} placeholder="Phone" />
+        {errors.phone?.type === 'required' && 
+        <span className='msgError'>El teléfono es requerido</span>}
+        
+        <label htmlFor="subject">Asunto</label>
+        <input {...register('subject')} type="text" placeholder="Asunto" maxLength={40} />
+        {errors.subject?.type === 'required' && 
+        <span className='msgError'>El asunto es requerido</span>}
+        
         <label htmlFor="description">Descripción</label>
-        <textarea {...register('description')} required placeholder="Descripción" maxLength={600}></textarea>
+        <textarea {...register('description')} placeholder="Descripción" maxLength={600}></textarea>
+
         <button type="submit">Submit</button>
       </form>
+      <span className='success'>Consulta enviada con éxito</span>
     </ContactStyled>
   )
 }

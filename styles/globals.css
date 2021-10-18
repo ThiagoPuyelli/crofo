@@ -23,3 +23,16 @@ a {
 :root {
   --violeta: #7510F7;
 }
+
+.msgError {
+  color: red;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.success {
+  margin-top: 20px;
+  font-size: 20px;
+  color: var(--violeta);
+  font-weight: bold;
+}

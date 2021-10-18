@@ -41,6 +41,14 @@ const CarouselDS: NextPage = () => {
         font-size: 20px;
       }
     }
+
+    @media (max-width: 1170px) {
+      margin-top: 1000px;      
+    }
+
+    @media (max-width: 780px) {
+      margin-top: 1800px;      
+    }
   `
 
   return (
@@ -60,42 +68,42 @@ const CarouselDS: NextPage = () => {
           <div className='iframeDiv'>
             <h3>🍉 | SG Community.</h3>
             <p>Miembros: 61K</p>
-            <iframe src="https://discord.com/widget?id=411615677678616607&theme=dark" width="250" height="350" allowTransparency={true} frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+            <iframe src="https://discord.com/widget?id=411615677678616607&theme=dark" width="250" height="350" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className='iframeDiv'>
             <h3>#StayWyger</h3>
             <p>Miembros: 149</p>
-            <iframe src="https://discord.com/widget?id=805854905591922718&theme=dark" width="250" height="350" allowTransparency={true} frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+            <iframe src="https://discord.com/widget?id=805854905591922718&theme=dark" width="250" height="350" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className='iframeDiv'>
             <h3>King Discord</h3>
             <p>Miembros: 24K</p>
-            <iframe src="https://discord.com/widget?id=870993545459277825&theme=dark" width="250" height="350" allowTransparency={true} frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+            <iframe src="https://discord.com/widget?id=870993545459277825&theme=dark" width="250" height="350" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className='iframeDiv'>
             <h3>#BeAKnight</h3>
             <p>Miembros: 878</p>
-            <iframe src="https://discord.com/widget?id=543134025464676353&theme=dark" width="250" height="350" allowTransparency={true} frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+            <iframe src="https://discord.com/widget?id=543134025464676353&theme=dark" width="250" height="350" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className='iframeDiv'>
             <h3>Dr Igo Discord</h3>
             <p>Miembros: 3K</p>
-            <iframe src="https://discord.com/widget?id=338814044813131780&theme=dark" width="250" height="350" allowTransparency={true} frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+            <iframe src="https://discord.com/widget?id=338814044813131780&theme=dark" width="250" height="350" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className='iframeDiv'>
             <h3>Papitalandia</h3>
             <p>Miembros: 12K</p>
-            <iframe src="https://discord.com/widget?id=331552260108713987&theme=dark" width="250" height="350" allowTransparency={true} frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+            <iframe src="https://discord.com/widget?id=331552260108713987&theme=dark" width="250" height="350" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
           </div>
         </SwiperSlide>
       </Swiper>
