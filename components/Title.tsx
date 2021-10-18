@@ -38,9 +38,7 @@ const Title: NextPage = () => {
             <h2>Administro y programo cosas maravillosamente simples, y me encanta lo que hago.</h2>
           </div>
           <div className="divImage">
-          <Image className="img" src={worker} alt="worker">
-
-          </Image>
+            <Image className="img" src={worker} alt="worker"></Image>
           </div>
       </TitleStyled>
     )

@@ -26,13 +26,11 @@ const CarouselDS: NextPage = () => {
     .swiper-button-prev:hover {
       text-shadow: 0px 0px 4px var(--violeta);
     }
-    @media(max-width:978px) {
-      
-    }
     .divTitle {
       text-align: center;
       color: #000;
-      font-family: fuenteTitulos;
+      font-size: 20px;
+      margin-top: 250px;
     }
   `
 

@@ -45,10 +45,13 @@ const Header: NextPage = () => {
       </div>
       <ul className='linksHeader'>
         <li className='linkHeader'>
-          <a href='#'>Skills</a>
+          <a href='#'>Inicio</a>
         </li>
         <li className='linkHeader'>
-          <a href='#'>Proyectos</a>
+          <a href='#'>Sobre Mi</a>
+        </li>
+        <li className='linkHeader'>
+          <a href='#'>Servidores</a>
         </li>
         <li className='linkHeader'>
           <a href='#'>Contacto</a>
