@@ -10,7 +10,7 @@ const About: NextPage = () => {
         .divAbout {
           background-color: #7510F7;
           width: 100%;
-          height: 990px;
+          height: 950px;
         }
 
         .titleH3 {
@@ -37,12 +37,19 @@ const About: NextPage = () => {
           background-color: white;
           border-radius: 50px;
           height: 990px;
+          padding-top: 100px;
+          div {
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 4px var(--violeta);
+          }
         }
 
         .icon {
-          margin-top: 100px;
           color: #000;
-          margin-left: 110px;
           font-size: 45px;
         }
 

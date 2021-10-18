@@ -6,36 +6,46 @@ import styled from '@emotion/styled'
 const CarouselDS: NextPage = () => {
   const CarouselStyled = styled.div`
     margin: 0px auto;
-    width: 80%;
-    .iframeDiv {
-      display: flex;
-      flex-flow: column wrap;
-      align-items: center;
-    }
-    .swiper-button-next {
-      color: var(--violeta);
-      transition: 300ms all;
-    }
-    .swiper-button-next:hover {
-      text-shadow: 0px 0px 4px var(--violeta);
-    }
-    .swiper-button-prev {
-      color: var(--violeta);
-      transition: 300ms all;
-    }
-    .swiper-button-prev:hover {
-      text-shadow: 0px 0px 4px var(--violeta);
-    }
-    .divTitle {
-      text-align: center;
-      color: #000;
-      font-size: 20px;
-      margin-top: 250px;
+    width: 100%;
+    margin-top: 550px;
+    background-color: var(--violeta);
+    padding: 20px;
+    .contentCarousel {
+      background: white;
+      width: 80%;
+      margin: 0px auto;
+      padding: 20px;
+      border-radius: 20px;
+      .iframeDiv {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+      }
+      .swiper-button-next {
+        color: var(--violeta);
+        transition: 300ms all;
+      }
+      .swiper-button-next:hover {
+        text-shadow: 0px 0px 4px var(--violeta);
+      }
+      .swiper-button-prev {
+        color: var(--violeta);
+        transition: 300ms all;
+      }
+      .swiper-button-prev:hover {
+        text-shadow: 0px 0px 4px var(--violeta);
+      }
+      .divTitle {
+        text-align: center;
+        color: #000;
+        font-size: 20px;
+      }
     }
   `
 
   return (
     <CarouselStyled>
+      <div className="contentCarousel">  
       <div className="divTitle">
         <h1>Servidores en los que trabajo</h1>
       </div>
@@ -89,6 +99,7 @@ const CarouselDS: NextPage = () => {
           </div>
         </SwiperSlide>
       </Swiper>
+      </div>
     </CarouselStyled>
   )
 }

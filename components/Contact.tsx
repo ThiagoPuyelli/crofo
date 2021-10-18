@@ -24,9 +24,9 @@ const Contact: NextPage = () => {
       display: flex;
       flex-flow: column wrap;
       align-items: center;
-      width: 400px;
+      width: 900px;
       border-radius: 20px;
-      background: white;
+      background: #f7f7f7;
       box-shadow: 0px 0px 4px var(--violeta);
       margin: 0px auto;
       padding: 20px;
@@ -35,32 +35,29 @@ const Contact: NextPage = () => {
       button,
       textarea {
         margin-top: 20px;
+        width: 80%;
       }
       input {
         border: 1px solid #ccc;
         box-shadow: 0px 0px 3px #ccc;
         font-size: 17px;
         padding: 10px;
-        width: 280px;
       }
       label {
         font-size: 20px;
-        width: 280px;
         border-bottom: 2px solid var(--violeta);
         padding-bottom: 15px;
       }
       textarea {
-        width: 280px;
         padding: 10px;
         border: 1px solid #ccc;
         height: 200px;
       }
       button {
-        width: 280px;
         padding: 10px;
         color: white;
         border: none;
-        background-color: #2ca03b;
+        background-color: var(--violeta);
         font-size: 20px;
         font-weight: bold;
         border-radius: 20px;
@@ -69,7 +66,7 @@ const Contact: NextPage = () => {
         box-shadow: 0px 0px 4px #ccc;
       }
       button:hover {
-        background-color: green;
+        background-color: #5609b9;
       }
     }
   `  
