@@ -11,7 +11,7 @@ const Header: NextPage = () => {
     width: 100%;
     height: 100px;
     align-items: center;
-    border-bottom: 2px solid #7510F7;
+    border-bottom: 2px solid var(--violeta);
     .logo {
       transition: 300ms all;
     }

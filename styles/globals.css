@@ -19,3 +19,7 @@ a {
 * {
   box-sizing: border-box;
 }
+
+:root {
+  --violeta: #7510F7;
+}

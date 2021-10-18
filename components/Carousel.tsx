@@ -13,18 +13,18 @@ const CarouselDS: NextPage = () => {
       align-items: center;
     }
     .swiper-button-next {
-      color: #7510F7;
+      color: var(--violeta);
       transition: 300ms all;
     }
     .swiper-button-next:hover {
-      text-shadow: 0px 0px 4px #7510F7;
+      text-shadow: 0px 0px 4px var(--violeta);
     }
     .swiper-button-prev {
-      color: #7510F7;
+      color: var(--violeta);
       transition: 300ms all;
     }
     .swiper-button-prev:hover {
-      text-shadow: 0px 0px 4px #7510F7;
+      text-shadow: 0px 0px 4px var(--violeta);
     }
     @media(max-width:978px) {
       
