@@ -7,7 +7,7 @@ const CarouselDS: NextPage = () => {
   const CarouselStyled = styled.div`
     margin: 0px auto;
     width: 100%;
-    margin-top: 550px;
+    margin-top: 50px;
     background-color: var(--violeta);
     padding: 20px;
     .contentCarousel {
@@ -16,6 +16,7 @@ const CarouselDS: NextPage = () => {
       margin: 0px auto;
       padding: 20px;
       border-radius: 20px;
+      margin-top: 45px;
       .iframeDiv {
         display: flex;
         flex-flow: column wrap;
@@ -41,18 +42,10 @@ const CarouselDS: NextPage = () => {
         font-size: 20px;
       }
     }
-
-    @media (max-width: 1170px) {
-      margin-top: 1000px;      
-    }
-
-    @media (max-width: 780px) {
-      margin-top: 1800px;      
-    }
   `
 
   return (
-    <CarouselStyled>
+    <CarouselStyled id="servidores">
       <div className="contentCarousel">  
       <div className="divTitle">
         <h1>Servidores en los que trabajo</h1>

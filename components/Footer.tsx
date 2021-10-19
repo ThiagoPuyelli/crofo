@@ -9,7 +9,7 @@ const Footer: NextPage = () => {
     const FooterStyled = styled.div`
         .container {
             background-color: #7510F7;
-            height: 350px;
+            margin-bottom: -50px;
         }
 
         .titleH4 {

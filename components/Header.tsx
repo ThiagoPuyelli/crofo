@@ -12,6 +12,10 @@ const Header: NextPage = () => {
     height: 100px;
     align-items: center;
     border-bottom: 2px solid var(--violeta);
+    position: fixed;
+    background: white;
+    z-index: 3;
+    top: 0;
     .logo {
       transition: 300ms all;
     }
@@ -38,6 +42,7 @@ const Header: NextPage = () => {
     @media (max-width: 672px) {
       padding: 0px;
       height: 80px;
+      position: relative;
       .logo {
         width: 100%;
         text-align: center;
@@ -46,6 +51,7 @@ const Header: NextPage = () => {
         width: 100%;
         justify-content: space-evenly;
         margin: 0px;
+        font-size: 20px;
       }
     }
 
@@ -53,9 +59,19 @@ const Header: NextPage = () => {
       .logo {
         font-size: 15px;
       }
-      .linkHeader {
+      .linkHeader a {
         margin: 5px;
-        font-size: 11px;
+        font-size: 11.4px;
+      }
+    }
+
+    @media (max-width: 411px) {
+      .linksHeader {
+        width: 300px;
+        margin: 0 auto;
+      }
+      .linkHeader a {
+        font-size: 18px;
       }
     }
   `
@@ -72,13 +88,13 @@ const Header: NextPage = () => {
           <a href='#'>Inicio</a>
         </li>
         <li className='linkHeader'>
-          <a href='#'>Sobre Mi</a>
+          <a href='#sobre-mi'>Sobre Mi</a>
         </li>
         <li className='linkHeader'>
-          <a href='#'>Servidores</a>
+          <a href='#servidores'>Servidores</a>
         </li>
         <li className='linkHeader'>
-          <a href='#'>Contacto</a>
+          <a href='#form'>Contacto</a>
         </li>
       </ul>
     </HeaderStyled>

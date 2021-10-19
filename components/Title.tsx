@@ -7,7 +7,7 @@ const Title: NextPage = () => {
     const TitleStyled = styled.div`
         .title-sub {
             text-align: center;
-            margin-top: 80px;
+            margin-top: 130px;
             margin-bottom: 100px;
             font-size: 30px;
         }
@@ -33,6 +33,12 @@ const Title: NextPage = () => {
         @media (max-width: 464px) {
           h1 {
             font-size: 30px;
+          }
+        }
+
+        @media (max-width: 411px) {
+          h1 {
+            margin-top: 150px;
           }
         }
     `

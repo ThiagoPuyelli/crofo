@@ -10,7 +10,6 @@ const About: NextPage = () => {
         .divAbout {
           background-color: #7510F7;
           width: 100%;
-          height: 950px;
         }
 
         .titleH3 {
@@ -25,7 +24,7 @@ const About: NextPage = () => {
           margin-top: 40px;
           font-size: 26px;
           color: white;
-          margin-bottom: 100px;
+          margin-bottom: 200px;
         }
 
         .container-skills {
@@ -34,7 +33,7 @@ const About: NextPage = () => {
           justify-content: space-around;
           margin-top: 60px;
           background-color: white;
-          border-radius: 50px;
+          border-radius: 50px 50px 0px 0px;
           padding-top: 100px;
           height: auto;
           div {
@@ -44,6 +43,7 @@ const About: NextPage = () => {
             padding: 20px;
             border-radius: 20px;
             box-shadow: 0px 0px 4px var(--violeta);
+            border: 3px solid var(--violeta);
             margin-top: 10px;
           }
         }
@@ -96,7 +96,7 @@ const About: NextPage = () => {
   
     return (
       <AboutStyled>
-          <div className="divAbout">
+          <div className="divAbout" id="sobre-mi">
               <h3 className="titleH3">Hola, soy Crofo. Un placer conocerte.</h3>
               <p className="subP">Actualmente vivo en Argentina, me considero desarrollador Frontend ya que manejo sus principales tencologias. Ademas estoy aprendiendo nuevas librerias como react y angular para poder aumentar mi conocimiento.</p>
             <div className="container-skills">

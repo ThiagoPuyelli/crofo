@@ -31,6 +31,7 @@ const Contact: NextPage = () => {
       box-shadow: 0px 0px 4px var(--violeta);
       margin: 0px auto;
       padding: 20px;
+      margin-top: 80px;
       label,
       input,
       button,
@@ -105,7 +106,7 @@ const Contact: NextPage = () => {
   }
 
   return (
-    <ContactStyled>
+    <ContactStyled id="form">
       <form className="formContact" onSubmit={handleSubmit(sendMail)}>
         <h1>Contáctame</h1>
         
