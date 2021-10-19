@@ -29,6 +29,12 @@ const Title: NextPage = () => {
             border-radius: 50%;
             margin-top: 20px;
         }
+
+        @media (max-width: 464px) {
+          h1 {
+            font-size: 30px;
+          }
+        }
     `
   
     return (

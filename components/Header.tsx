@@ -34,6 +34,30 @@ const Header: NextPage = () => {
         }
       }
     }
+
+    @media (max-width: 672px) {
+      padding: 0px;
+      height: 80px;
+      .logo {
+        width: 100%;
+        text-align: center;
+      }
+      .linksHeader {
+        width: 100%;
+        justify-content: space-evenly;
+        margin: 0px;
+      }
+    }
+
+    @media (max-width: 462px) {
+      .logo {
+        font-size: 15px;
+      }
+      .linkHeader {
+        margin: 5px;
+        font-size: 11px;
+      }
+    }
   `
 
   return (
