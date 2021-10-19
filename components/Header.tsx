@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import styled from '@emotion/styled'
+import Menu from './Menu'
 
 const Header: NextPage = () => {
   const HeaderStyled = styled.header`
@@ -39,6 +40,10 @@ const Header: NextPage = () => {
       }
     }
 
+    .menuHeader {
+      display: none;
+    }
+    
     @media (max-width: 672px) {
       padding: 0px;
       height: 80px;
@@ -48,30 +53,17 @@ const Header: NextPage = () => {
         text-align: center;
       }
       .linksHeader {
-        width: 100%;
-        justify-content: space-evenly;
-        margin: 0px;
-        font-size: 20px;
+        display: none;
+      }
+      .menuHeader {
+        display: block;
       }
     }
+
 
     @media (max-width: 462px) {
       .logo {
         font-size: 15px;
-      }
-      .linkHeader a {
-        margin: 5px;
-        font-size: 11.4px;
-      }
-    }
-
-    @media (max-width: 411px) {
-      .linksHeader {
-        width: 300px;
-        margin: 0 auto;
-      }
-      .linkHeader a {
-        font-size: 18px;
       }
     }
   `
@@ -97,6 +89,9 @@ const Header: NextPage = () => {
           <a href='#form'>Contacto</a>
         </li>
       </ul>
+      <div className='menuHeader'>
+        <Menu />
+      </div>
     </HeaderStyled>
   )
 }
