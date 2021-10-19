@@ -70,7 +70,8 @@ const Contact: NextPage = () => {
         background-color: #5609b9;
       }
     }
-    .success.progress {
+
+    .success {
       display: none;
     }
 
@@ -84,7 +85,19 @@ const Contact: NextPage = () => {
     resolver: yupResolver(consultSchema)
   })
 
-  const sendMail = async () => {
+  const spanDisplay = () => {
+    const form: any = document.querySelector('.formContact')
+    const span: HTMLElement|null = document.querySelector('.success')
+
+    if (form) form.reset()
+    if (span) span.style.display = 'block'
+
+    setTimeout(() => {
+      if (span) span.style.display = 'none'
+    }, 5000)
+  }
+
+  const sendMail: any = async () => {
     try {
       const form: any = document.querySelector('.formContact')
       if (form) {                               //Service ID        // Template ID
@@ -92,7 +105,7 @@ const Contact: NextPage = () => {
         if (!sendMail) {
           console.log('error to send mail')
         }
-        alert('Consulta enviada con éxito')
+        spanDisplay()
 
       } else {
         console.log('Error to find form')
@@ -130,6 +143,7 @@ const Contact: NextPage = () => {
         <label htmlFor="description">Descripción</label>
         <textarea {...register('description')} placeholder="Descripción" maxLength={600}></textarea>
 
+        <span className="success">Consulta enviada con éxito</span>
         <button type="submit">Submit</button>
       </form>
     </ContactStyled>
