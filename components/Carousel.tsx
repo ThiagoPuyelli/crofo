@@ -10,6 +10,9 @@ const CarouselDS: NextPage = () => {
     margin-top: 50px;
     background-color: var(--violeta);
     padding: 20px;
+    .swiper1 {
+      display: none;
+    }
     .contentCarousel {
       background: white;
       width: 80%;
@@ -42,6 +45,23 @@ const CarouselDS: NextPage = () => {
         font-size: 20px;
       }
     }
+    @media (max-width: 1136px) {
+      .swiper1 {
+        display: block;
+      }
+      .swiper3 {
+        display: none;
+      }
+    }
+
+    @media (max-width: 470px) {
+      .divTitle h1 {
+        font-size: 23px;
+      }
+      .contentCarousel {
+        width: 95%;
+      }
+    }
   `
 
   return (
@@ -56,6 +76,58 @@ const CarouselDS: NextPage = () => {
         navigation
         draggable={false}
         slidesPerView={3}
+        className='swiper3'
+      >
+        <SwiperSlide>
+          <div className='iframeDiv'>
+            <h3>🍉 | SG Community.</h3>
+            <p>Miembros: 61K</p>
+            <iframe src="https://discord.com/widget?id=411615677678616607&theme=dark" width="250" height="350" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className='iframeDiv'>
+            <h3>#StayWyger</h3>
+            <p>Miembros: 149</p>
+            <iframe src="https://discord.com/widget?id=805854905591922718&theme=dark" width="250" height="350" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className='iframeDiv'>
+            <h3>King Discord</h3>
+            <p>Miembros: 24K</p>
+            <iframe src="https://discord.com/widget?id=870993545459277825&theme=dark" width="250" height="350" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className='iframeDiv'>
+            <h3>#BeAKnight</h3>
+            <p>Miembros: 878</p>
+            <iframe src="https://discord.com/widget?id=543134025464676353&theme=dark" width="250" height="350" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className='iframeDiv'>
+            <h3>Dr Igo Discord</h3>
+            <p>Miembros: 3K</p>
+            <iframe src="https://discord.com/widget?id=338814044813131780&theme=dark" width="250" height="350" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className='iframeDiv'>
+            <h3>Papitalandia</h3>
+            <p>Miembros: 12K</p>
+            <iframe src="https://discord.com/widget?id=331552260108713987&theme=dark" width="250" height="350" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+          </div>
+        </SwiperSlide>
+      </Swiper>
+      <Swiper
+        spaceBetween={50}
+        modules={[Navigation, A11y]}
+        navigation
+        draggable={false}
+        slidesPerView={1}
+        className='swiper1'
       >
         <SwiperSlide>
           <div className='iframeDiv'>

@@ -3,7 +3,6 @@ import styled from '@emotion/styled'
 import * as yup from 'yup'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
-import { env } from '../next.config'
 import emailjs from 'emailjs-com'
 
 const consultSchema = yup.object({
@@ -71,7 +70,7 @@ const Contact: NextPage = () => {
         background-color: #5609b9;
       }
     }
-    .success {
+    .success.progress {
       display: none;
     }
 
@@ -88,15 +87,13 @@ const Contact: NextPage = () => {
   const sendMail = async () => {
     try {
       const form: any = document.querySelector('.formContact')
-      if (form) {
+      if (form) {                               //Service ID        // Template ID
         const sendMail = await emailjs.sendForm('service_6muus8v', 'template_wcvnqmj', form, 'user_rAjCF7QtDc5L90sP9WDVe')
         if (!sendMail) {
           console.log('error to send mail')
         }
-        
-        const success: HTMLElement|null = document.querySelector('.success')
-        form.style.display = 'block'
-        if (success) success.style.display = 'block !important'
+        alert('Consulta enviada con éxito')
+
       } else {
         console.log('Error to find form')
       }
@@ -135,7 +132,6 @@ const Contact: NextPage = () => {
 
         <button type="submit">Submit</button>
       </form>
-      <span className='success'>Consulta enviada con éxito</span>
     </ContactStyled>
   )
 }
