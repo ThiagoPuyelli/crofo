@@ -81,11 +81,11 @@ const Contact: NextPage = () => {
       }
     }
   `  
-  const { register, handleSubmit, formState: { errors } } = useForm({
+  const { register, handleSubmit, formState: { errors }, reset } = useForm({
     resolver: yupResolver(consultSchema)
   })
 
-  const spanDisplay = () => {
+  /*const spanDisplay = () => {
     const form: any = document.querySelector('.formContact')
     const span: HTMLElement|null = document.querySelector('.success')
 
@@ -95,7 +95,7 @@ const Contact: NextPage = () => {
     setTimeout(() => {
       if (span) span.style.display = 'none'
     }, 5000)
-  }
+  }*/
 
   const sendMail: any = async () => {
     try {
@@ -105,7 +105,8 @@ const Contact: NextPage = () => {
         if (!sendMail) {
           console.log('error to send mail')
         }
-        spanDisplay()
+        alert('Consulta enviada con éxito')
+        reset()
 
       } else {
         console.log('Error to find form')
