@@ -88,7 +88,7 @@ const Contact: NextPage = () => {
     try {
       const form: any = document.querySelector('.formContact')
       if (form) {                               //Service ID        // Template ID
-        const sendMail = await emailjs.sendForm('service_6muus8v', 'template_wcvnqmj', form, 'user_rAjCF7QtDc5L90sP9WDVe')
+        const sendMail = await emailjs.sendForm('service_w9z84q2', 'template_hyg1u9p', form, 'user_ptxx8lAAdUhoe7ZCiATmB')
         if (!sendMail) {
           console.log('error to send mail')
         }

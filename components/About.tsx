@@ -1,8 +1,11 @@
 import type { NextPage } from 'next'
 import styled from '@emotion/styled'
+import logo1 from '../public/img/logito.png'
+import logo2 from '../public/img/logito2.png'
+import logo3 from '../public/img/logito3.png'
 import Image from 'next/image'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faEnvelope} from '@fortawesome/free-solid-svg-icons'
+import {faEnvelope, faLayerGroup} from '@fortawesome/free-solid-svg-icons'
 import {faTwitter, faDiscord} from '@fortawesome/free-brands-svg-icons'
 
 const About: NextPage = () => {
@@ -25,6 +28,7 @@ const About: NextPage = () => {
           font-size: 26px;
           color: white;
           margin-bottom: 200px;
+          margin-right: 50px;
         }
 
         .container-skills {
@@ -41,9 +45,6 @@ const About: NextPage = () => {
             flex-flow: column wrap;
             align-items: center;
             padding: 20px;
-            border-radius: 20px;
-            box-shadow: 0px 0px 4px var(--violeta);
-            border: 3px solid var(--violeta);
             margin-top: 10px;
           }
         }
@@ -51,6 +52,10 @@ const About: NextPage = () => {
         .icon {
           color: #000;
           font-size: 45px;
+        }
+
+        .icon2 {
+          width: 170px;
         }
 
         .titleH2 {
@@ -98,51 +103,56 @@ const About: NextPage = () => {
       <AboutStyled>
           <div className="divAbout" id="sobre-mi">
               <h3 className="titleH3">Hola, soy Crofo. Un placer conocerte.</h3>
-              <p className="subP">Actualmente vivo en Argentina, me considero desarrollador Frontend ya que manejo sus principales tencologias. Ademas estoy aprendiendo nuevas librerias como react y angular para poder aumentar mi conocimiento.</p>
+              <p className="subP">Actualmente vivo en Argentina, estoy en el ecosistema de esports de 2013 y la configuracion de servidores para discord de 2017. Desde julio de 2021 formo parte del programa de moderadores certificados dentro de discord y me dedico a administrar redes y contenido de esports para organizaciones.</p>
             <div className="container-skills">
               <div>
-                <FontAwesomeIcon className="icon" icon={faDiscord}/>
-                <h2 className="titleH2">Discord Community Manager</h2>
-                <p className="paragraph">Desarrollo páginas web y aplicaciones modernas utilizando las técnicas y herramientas de desarrollo front-end. Creo que todos los productos deben construirse con un fuerte enfoque en la accesibilidad, el rendimiento y la interacción del usuario.</p>
-                <p className="sectionP">Lenguajes con los que desarrollo:</p>
-                <p className="sectionLanguages">Html, Css, Js, Bootstrap</p>
-                <p className="sectionH">Herramientas de desarrollador:</p>
+                {/* <FontAwesomeIcon className="icon" icon={faDiscord}/> */}
+                <div className="icon2">
+                  <Image src={logo1} alt='Menú imagen' />
+                </div>
+                <h2 className="titleH2">Discord & Events Manager</h2>
+                <p className="paragraph"></p>
+                <p className="sectionP">Periodo dentro de la organizacion:</p>
+                <p className="sectionLanguages">06/20 - 01/21</p>
+                <p className="sectionH">Actividades realizadas:</p>
                 <ul className="sectionList">
-                  <li>Google</li>
-                  <li>CodePen</li>
-                  <li>Visual Studio</li>
-                  <li>Github</li>
-                  <li>Terminal</li>
+                  <li>Viewing Party - 1500 Usuarios</li>
+                  <li>Torneos Comunitarios - 500 Participantes</li>
+                  <li>Reportes Mensuales De Metricas</li>
+                  <li>Streamer Manager</li>
+                  <li>Discord Manager</li>
                 </ul>
               </div>
               <div>
-                <FontAwesomeIcon className="icon" icon={faDiscord}/>
-                <h2 className="titleH2">Front-End developer</h2>
-                <p className="paragraph">Creo servidores de discord desde cero implementando un sistema de canales, roles y bots organizados con los permisos que desee el cliente. Ademas desarrollo bots con node.js desde cero con los comandos para poder administrar el servidor.</p>
-                <p className="sectionP">Lenguajes con los que desarrollo:</p>
-                <p className="sectionLanguages">Html, Css, Js, Bootstrap</p>
-                <p className="sectionH">Herramientas de desarrollador:</p>
+                {/* <FontAwesomeIcon className="icon" icon={faDiscord}/> */}
+                <div className="icon2">
+                  <Image src={logo2} alt='Menú imagen' />
+                </div>
+                <h2 className="titleH2">Community Manager</h2>
+                <p className="paragraph"></p>
+                <p className="sectionP">Periodo dentro de la organizacion:</p>
+                <p className="sectionLanguages">11/20 - 05/21</p>
+                <p className="sectionH">Actividades Realizadas:</p>
                 <ul className="sectionList">
-                  <li>Google</li>
-                  <li>CodePen</li>
-                  <li>Visual Studio</li>
-                  <li>Github</li>
-                  <li>Terminal</li>
+                  <li>Administracion de Redes</li>
+                  <li>Organizacion de Eventos - TT 1 Argentina</li>
+                  <li>Discord Manager</li>
                 </ul>
               </div>
               <div>
-                <FontAwesomeIcon className="icon" icon={faDiscord}/>
-                <h2 className="titleH2">Desarrollador Web</h2>
-                <p className="paragraph">Realmente me preocupo por la gente y me encanta ayudar a otros programadores que tienen errores o que son nuevos. Ademas estoy escribiendo algunos libros para poder aprender cosas importantes sobre la programación.</p>
-                <p className="sectionP">Lenguajes con los que desarrollo:</p>
-                <p className="sectionLanguages">Html, Css, Js, Bootstrap</p>
-                <p className="sectionH">Herramientas de desarrollador:</p>
+                {/* <FontAwesomeIcon className="icon" icon={faDiscord}/> */}
+                <div className="icon2">
+                  <Image src={logo3} alt='Menú imagen' />
+                </div>
+                <h2 className="titleH2">Social Media Manager</h2>
+                <p className="paragraph"></p>
+                <p className="sectionP">Periodo dentro de la organizacion:</p>
+                <p className="sectionLanguages">05/21 - Actualmente</p>
+                <p className="sectionH">Actividades Realizadas:</p>
                 <ul className="sectionList">
-                  <li>Google</li>
-                  <li>CodePen</li>
-                  <li>Visual Studio</li>
-                  <li>Github</li>
-                  <li>Terminal</li>
+                  <li>Administracion de Redes</li>
+                  <li>Planificacion de Estrategias</li>
+                  <li>Produccion Audiovisual</li>
                 </ul>
               </div>
             </div>

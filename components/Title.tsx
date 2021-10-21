@@ -46,8 +46,9 @@ const Title: NextPage = () => {
     return (
       <TitleStyled>
           <div className="title-sub">
-            <h1>Administrador & Desarrollador Web</h1>
-            <h2>Administro y programo cosas maravillosamente simples, y me encanta lo que hago.</h2>
+            <h1>Social Media Manager</h1>
+            <h2>Administro, analizo y creo contenido dedicado a esports</h2>
+            <h2>Configuracion y managment de comunidades en Discord</h2>
           </div>
           <div className="divImage">
             <Image className="img" src={worker} alt="worker"></Image>
