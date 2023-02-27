@@ -56,6 +56,10 @@ const About: NextPage = () => {
 
         .icon2 {
           width: 170px;
+          * {
+            width: 100%;
+            height: 100%;
+          }
         }
 
         .titleH2 {
