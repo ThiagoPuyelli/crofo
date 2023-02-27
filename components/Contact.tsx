@@ -3,7 +3,6 @@ import styled from '@emotion/styled'
 import * as yup from 'yup'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
-import emailjs from 'emailjs-com'
 
 const consultSchema = yup.object({
   name: yup.string().required(),
@@ -85,35 +84,9 @@ const Contact: NextPage = () => {
     resolver: yupResolver(consultSchema)
   })
 
-  /*const spanDisplay = () => {
-    const form: any = document.querySelector('.formContact')
-    const span: HTMLElement|null = document.querySelector('.success')
-
-    if (form) form.reset()
-    if (span) span.style.display = 'block'
-
-    setTimeout(() => {
-      if (span) span.style.display = 'none'
-    }, 5000)
-  }*/
 
   const sendMail: any = async () => {
-    try {
-      const form: any = document.querySelector('.formContact')
-      if (form) {                               //Service ID        // Template ID
-        const sendMail = await emailjs.sendForm('service_w9z84q2', 'template_hyg1u9p', form, 'user_ptxx8lAAdUhoe7ZCiATmB')
-        if (!sendMail) {
-          console.log('error to send mail')
-        }
-        alert('Consulta enviada con éxito')
-        reset()
-
-      } else {
-        console.log('Error to find form')
-      }
-    } catch (err) {
-      console.log(err)
-    }
+    console.log('a')
   }
 
   return (

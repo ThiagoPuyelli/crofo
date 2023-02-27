@@ -51,7 +51,7 @@ const Title: NextPage = () => {
             <h2>Configuracion y managment de comunidades en Discord</h2>
           </div>
           <div className="divImage">
-            <Image className="img" src={worker} alt="worker"></Image>
+            <Image className="img" src={worker} alt="worker" />
           </div>
       </TitleStyled>
     )
